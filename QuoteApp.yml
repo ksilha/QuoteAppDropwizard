@@ -1,0 +1,10 @@
+server:
+    rootPath: /api/*
+
+quotes:
+    - quoteText: "To act coolly, intelligently and prudently in perilous circumstances is the test of a man - and also a nation."
+      author: "Adlai E. Stevenson"
+    - quoteText: "One cool judgment is worth a thousand hasty counsels. The thing to do is to supply light and not heat."
+      author: "Woodrow Wilson"
+    - quoteText: "All our dreams can come true, if we have the courage to pursue them."
+      author: "Walt Disney"

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Quote of the Day</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+<div id="header"><span class="title">Quote of the Day</span></div>
+
+<div id="sidebar"></div>
+
+<div id="content">
+<h2>Quote of the Day</h2>
+<div id="dailyquote">
+<script type="text/template" id="tpl-quote-of-the-day">
+<p>"<%= quoteText %>"</p>
+<p><%= author %></p>
+</script>
+</div>
+</div>
+
+<!-- Templates -->
+<script type="text/template" id="tpl-header">
+    <span class="title">Quote of the Day</span><br>
+    <button class="new">Add Quote</button>
+    <button class="random">Random Quote</button>
+</script>
+
+<script type="text/template" id="tpl-quote-list-item">
+	<a href='#quotes/<%= id %>'><%= author %>:<br><%= quoteText.substr(0, 20) %> ... </a>
+</script>
+
+<script type="text/template" id="tpl-quote-details">
+    <div class="form-left-col">
+        <label>Id:</label>
+        <input type="text" id="quoteId" name="id" value="<%= id %>" disabled />
+        <label>Author:</label>
+        <input type="text" id="author" name="author" value="<%= author %>"/>
+        <button class="save">Save</button>
+        <button class="delete">Delete</button>
+    </div>
+    <div class="form-right-col">
+        <label>Quote:</label>
+        <textarea id="quoteText" name="quoteText"><%= quoteText %></textarea>
+    </div>
+</script>
+
+<!-- JavaScript -->
+<script src="lib/jquery-1.7.1.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone-min.js"></script>
+<script src="js/main.js"></script>   
+
+</body>
+</html>
