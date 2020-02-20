@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar QuoteAppDropwizard-1.0-SNAPSHOT.jar server QuoteApp.yml -Ddw.server.applicationConnectors[0].port=$PORT
+web: java $JAVA_OPTS -jar target/QuoteAppDropwizard-1.0-SNAPSHOT.jar db migrate QuoteApp.yml && java $JAVA_OPTS -Ddw.server.connector.port=$PORT -jar target/QuoteAppDropwizard-1.0-SNAPSHOT.jar server QuoteApp.yml
