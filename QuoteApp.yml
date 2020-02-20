@@ -1,3 +1,10 @@
+http:
+    port: 8080
+    adminPort: 8080
+
+    adminUsername: admin
+    adminPassword: password
+
 server:
     - rootPath: /api/*
 
