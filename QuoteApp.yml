@@ -1,11 +1,10 @@
-http:
-    port: 8080
-    adminPort: 8080
-
-    adminUsername: admin
-    adminPassword: password
-
 server:
+    type: simple
+    applicationContextPath: /
+    #adminContextPath: /admin # If you plan to use an admin path, you'll need to also use non-root app path
+    connector:
+      type: http
+      port: 8080
     - rootPath: /api/*
 
 quotes:
