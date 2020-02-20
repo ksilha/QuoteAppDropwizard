@@ -5,7 +5,7 @@ server:
     connector:
       type: http
       port: 8080
-    - rootPath: /api/*
+    rootPath: /api/*
 
 quotes:
     - quoteText: "To act coolly, intelligently and prudently in perilous circumstances is the test of a man - and also a nation."
